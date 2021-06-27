@@ -23,7 +23,7 @@
             </div>
         </div>
         <marquee behavior="" direction="" style="color: red; font-family:Cambria;">
-            <h3><i><strong>WELCOME TO DASHBOARD</strong></i></h3>
+            <h3><i><strong>WELCOME TO DASHBOARD POSYANDU</strong></i></h3>
         </marquee>
         <div class="row">
             <div class="col-lg-12">
@@ -44,9 +44,11 @@
                     <div class="card-body" style="background-color: #2ddff3;">
                         <div class="clearfix">
                             <div class="float-right">
-                                <p class="mb-0 text-right"><strong>Data Golongan</strong></p>
+                                <p class="mb-0 text-right"><strong>Data Balita</strong></p>
                                 <div class="container-fluid">
                                     {{-- <h3 class="text-right">{{ $golongan->count() }}</h3> --}}
+                                    <h3 class="text-right">4</h3>
+
                                 </div>
                             </div>
                         </div>
@@ -55,7 +57,7 @@
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg> &nbsp; Total seluruh Golongan
+                            </svg> &nbsp; Total seluruh Balita
                         </p>
                     </div>
                 </div>
@@ -68,9 +70,11 @@
                                 <i class="mdi mdi-receipt text-warning icon-lg"></i>
                             </div>
                             <div class="float-right">
-                                <p class="mb-0 text-right"><strong>Data Jabatan</strong></p>
+                                <p class="mb-0 text-right"><strong>Data Penimbangan Balita</strong></p>
                                 <div class="container-fluid">
                                     {{-- <h3 class="text-right">{{ $jabatan->count() }}</h3> --}}
+                                    <h3 class="text-right">13</h3>
+
                                 </div>
                             </div>
                         </div>
@@ -79,7 +83,7 @@
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg> &nbsp; Total seluruh Jabatan
+                            </svg> &nbsp; Total seluruh Penimbang Balita
                         </p>
                     </div>
                 </div>
@@ -92,9 +96,10 @@
                                 <i class="mdi mdi-receipt text-warning icon-lg"></i>
                             </div>
                             <div class="float-right">
-                                <p class="mb-0 text-right"><strong>Jumlah Guru</strong></p>
+                                <p class="mb-0 text-right"><strong>Jumlah Imunisasi</strong></p>
                                 <div class="container-fluid">
                                     {{-- <h3 class="text-right">{{ $guru->count() }}</h3> --}}
+                                    <h3 class="text-right">4</h3>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +108,7 @@
                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg> &nbsp; Total seluruh Guru
+                            </svg> &nbsp; Total seluruh Imunisasi
                         </p>
                     </div>
                 </div>
