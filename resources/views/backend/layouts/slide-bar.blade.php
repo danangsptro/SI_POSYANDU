@@ -7,7 +7,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#">POSYANDU</a>
-            <a class="navbar-brand hidden" href="#">K</a>
+            <a class="navbar-brand hidden" href="#">P</a>
         </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
