@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Backend
+Route::prefix('dashboard')->group(function () {
+    Route::get('admin', 'backend\adminController@index')->name('halaman-dashboard');
+
+});
