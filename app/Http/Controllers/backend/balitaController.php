@@ -8,17 +8,20 @@ use Illuminate\Http\Request;
 
 class balitaController extends Controller
 {
+    // Index
     public function index ()
     {
         $data = balita::all();
         return view('backend.balita.index', compact('data'));
     }
 
+    // Create
     public function create ()
     {
         return view('backend.balita.create-balita');
     }
 
+    // Tahap Proses Create
     public function store (Request $request)
     {
         $validate = $request->validate([
@@ -44,12 +47,14 @@ class balitaController extends Controller
         }
     }
 
+    // Edit
     public function edit($id)
     {
         $balita = balita::where('id', $id)->first();
         return view('backend.balita.edit-balitan', compact('balita'));
     }
 
+    // Tahap Proses Edit
     public function update(Request $request, balita $balita)
     {
         $request->validate([
@@ -79,6 +84,7 @@ class balitaController extends Controller
         }
     }
 
+    // Delete
     public function delete (balita $balita)
     {
         $balita->delete();
