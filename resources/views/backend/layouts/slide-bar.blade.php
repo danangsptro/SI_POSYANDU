@@ -24,10 +24,6 @@
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
                         </li>
-                        <li><i class="fa fa-table"></i><a href="">Jabatan</a> </li>
-                        <li><i class="fa fa-table"></i><a href="">Guru</a></li>
-                        <li><i class="fa fa-table"></i><a href="">Status</a></li>
-                        <li><i class="fa fa-table"></i><a href="">Jenis Kelamin</a></li>
                     </ul>
                 </li>
 
@@ -38,7 +34,7 @@
                         aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Profil</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li>
-                            <i class="fa fa-table"></i><a href="{{ route('profil') }}">Kader</a>
+                            <i class="fa fa-table"></i><a href="">Kader</a>
                         </li>
                     </ul>
                 </li>
