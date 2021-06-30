@@ -21,7 +21,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Table</a>
                     <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-table"></i><a href="">Golongan</a>
+                        <li>
+                            <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
                         <li><i class="fa fa-table"></i><a href="">Jabatan</a>
                         <li><i class="fa fa-table"></i><a href="">Guru</a>
                         <li><i class="fa fa-table"></i><a href="">Status</a>
