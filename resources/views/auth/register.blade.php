@@ -66,6 +66,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                    <a class="btn btn-dark" href="{{ route('login') }}">Back</a>
                             </div>
                         </div>
                     </form>

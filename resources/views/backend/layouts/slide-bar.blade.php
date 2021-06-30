@@ -13,7 +13,7 @@
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a href="{{route('halaman-dashboard')}}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                 </li>
                 <h3 class="menu-title">UI elements</h3>
 
@@ -23,10 +23,23 @@
                     <ul class="sub-menu children dropdown-menu">
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
-                        <li><i class="fa fa-table"></i><a href="">Jabatan</a>
-                        <li><i class="fa fa-table"></i><a href="">Guru</a>
-                        <li><i class="fa fa-table"></i><a href="">Status</a>
-                        <li><i class="fa fa-table"></i><a href="">Jenis Kelamin</a>
+                        </li>
+                        <li><i class="fa fa-table"></i><a href="">Jabatan</a> </li>
+                        <li><i class="fa fa-table"></i><a href="">Guru</a></li>
+                        <li><i class="fa fa-table"></i><a href="">Status</a></li>
+                        <li><i class="fa fa-table"></i><a href="">Jenis Kelamin</a></li>
+                    </ul>
+                </li>
+
+                <h3 class="menu-title">Data Kader</h3>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Profil</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li>
+                            <i class="fa fa-table"></i><a href="{{ route('profil') }}">Kader</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

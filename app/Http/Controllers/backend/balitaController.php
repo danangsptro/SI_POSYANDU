@@ -11,12 +11,12 @@ class balitaController extends Controller
     public function index ()
     {
         $data = balita::all();
-        return view('backend.layouts.balita.index', compact('data'));
+        return view('backend.balita.index', compact('data'));
     }
 
     public function create ()
     {
-        return view('backend.layouts.balita.create-balita');
+        return view('backend.balita.create-balita');
     }
 
     public function store (Request $request)
@@ -47,7 +47,7 @@ class balitaController extends Controller
     public function edit($id)
     {
         $balita = balita::where('id', $id)->first();
-        return view('backend.layouts.balita.edit-balitan', compact('balita'));
+        return view('backend.balita.edit-balitan', compact('balita'));
     }
 
     public function update(Request $request, balita $balita)
@@ -71,7 +71,6 @@ class balitaController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'alamat'        => $request->alamat
         ]);
-
 
         if ($balita) {
             return redirect()->route('index-balita')->with(['sukses' => 'Sukses Edit Data Balita']);
