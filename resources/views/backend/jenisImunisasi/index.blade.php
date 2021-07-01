@@ -60,8 +60,8 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $d->imunisasi }}</td>
                                 <td>
-                                <a href="" class="btn btn-warning" style="border-radius: 5rem">EDIT</a>
-                                    <form action="" class="d-inline" method="POST">
+                                    <a href="" class="btn btn-warning" style="border-radius: 5rem">EDIT</a>
+                                    <form action="{{ route('delete-imunisasi', $d->id) }}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger"

@@ -38,4 +38,16 @@ class jenisImunisasiController extends Controller
             return redirect()->route('index-jenisImunisasi')->with('gagal', 'Gagal Input Data Jenis Imunisasi');
         }
     }
+
+    // Delete
+    public function delete (jenis_imunisasi $jenis_imunisasi)
+    {
+        $jenis_imunisasi->delete();
+
+        if ($jenis_imunisasi) {
+            return redirect()->route('index-jenisImunisasi')->with('sukses', 'Sukses Delete Data');
+        } else {
+            return redirect()->route('index-jenisImunisasi')->with('gagal', 'Gagal Delete Data');
+        }
+    }
 }

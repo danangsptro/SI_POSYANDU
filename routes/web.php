@@ -34,5 +34,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('jenis_JenisImunisasi', 'backend\jenisImunisasiController@index')->name('index-jenisImunisasi');
         Route::get('create-jensiImunisasi', 'backend\jenisImunisasiController@create')->name('create-jenisImunisasi');
         Route::post('store-jenisImunisasi', 'backend\jenisImunisasiController@store')->name('store-jenisImunisasi');
+        Route::delete('delete-jenisImunisasi/{jenis_imunisasi}', 'backend\jenisImunisasiController@delete')->name('delete-imunisasi');
     });
 });
