@@ -46,9 +46,7 @@
                             <div class="float-right">
                                 <p class="mb-0 text-right"><strong>Data Balita</strong></p>
                                 <div class="container-fluid">
-                                    {{-- <h3 class="text-right">{{ $golongan->count() }}</h3> --}}
-                                    <h3 class="text-right">4</h3>
-
+                                    <h3 class="text-right">{{ $balita->count() }}</h3>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +96,7 @@
                             <div class="float-right">
                                 <p class="mb-0 text-right"><strong>Jumlah Imunisasi</strong></p>
                                 <div class="container-fluid">
-                                    {{-- <h3 class="text-right">{{ $guru->count() }}</h3> --}}
-                                    <h3 class="text-right">4</h3>
+                                    <h3 class="text-right">{{ $jenisImunisasi->count()  }}</h3>
                                 </div>
                             </div>
                         </div>

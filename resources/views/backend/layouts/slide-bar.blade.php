@@ -24,6 +24,9 @@
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
                         </li>
+                        <li>
+                            <i class="fa fa-table"></i><a href="{{ route('index-jenisImunisasi') }}">Jenis Imunisasi</a>
+                        </li>
                     </ul>
                 </li>
 

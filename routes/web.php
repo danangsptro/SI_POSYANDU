@@ -30,5 +30,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('edit-balita/{id}', 'backend\balitaController@edit')->name('edit-balita');
         Route::post('update-balita', 'backend\balitaController@update')->name('update-balita');
         Route::delete('delete-balita/{balita}', 'backend\balitaController@delete')->name('delete-balita');
+        // Jenis Kelamin
+        Route::get('jenis_JenisImunisasi', 'backend\jenisImunisasiController@index')->name('index-jenisImunisasi');
+        Route::get('create-jensiImunisasi', 'backend\jenisImunisasiController@create')->name('create-jenisImunisasi');
+        Route::post('store-jenisImunisasi', 'backend\jenisImunisasiController@store')->name('store-jenisImunisasi');
     });
 });
