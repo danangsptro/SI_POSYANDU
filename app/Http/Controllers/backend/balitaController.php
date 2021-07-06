@@ -5,24 +5,25 @@ namespace App\Http\Controllers\backend;
 use App\model\balita;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class balitaController extends Controller
 {
     // Index
-    public function index ()
+    public function index()
     {
         $data = balita::all();
         return view('backend.balita.index', compact('data'));
     }
 
     // Create
-    public function create ()
+    public function create()
     {
         return view('backend.balita.create-balita');
     }
 
     // Tahap Proses Create
-    public function store (Request $request)
+    public function store(Request $request)
     {
         $validate = $request->validate([
             'nama'          => 'required|max:30',
@@ -32,7 +33,7 @@ class balitaController extends Controller
             'alamat'        => 'required|max:50'
         ]);
 
-        $balita = new balita();
+        $balita                 = new balita();
         $balita->nama           = $validate['nama'];
         $balita->umur           = $validate['umur'];
         $balita->jenis_kelamin  = $validate['jenis_kelamin'];
@@ -41,9 +42,11 @@ class balitaController extends Controller
         $balita->save();
 
         if ($balita) {
-            return redirect()->route('index-balita')->with(['sukses' => 'Sukses Tambah Data Balita']);
+            toast("Data $balita->nama Berhasil Di Tambahkan ", 'success');
+            return redirect()->route('index-balita');
         } else {
-            return redirect()->route('index-balita')->with(['gagal' => 'Gagal Tambah Data Balita']);
+            toast("Data $balita->nama Gagal Di Tambahkan ", 'error');
+            return redirect()->route('index-balita');
         }
     }
 
@@ -55,7 +58,7 @@ class balitaController extends Controller
     }
 
     // Tahap Proses Edit
-    public function update(Request $request, balita $balita)
+    public function update(Request $request)
     {
         $request->validate([
             'nama'          =>  'required',
@@ -78,21 +81,24 @@ class balitaController extends Controller
         ]);
 
         if ($balita) {
-            return redirect()->route('index-balita')->with(['sukses' => 'Sukses Edit Data Balita']);
+            toast("Data $balita->nama Berhasil Di Edit ", 'success');
+            return redirect()->route('index-balita');
         } else {
-            return redirect()->route('index-balita')->with(['gagal' => 'Gagal Tambah Data Balita']);
+            toast("Data $balita->nama Gagal Di Edit ", 'error');
+            return redirect()->route('index-balita');
         }
     }
 
     // Delete
-    public function delete (balita $balita)
+    public function delete(balita $balita)
     {
         $balita->delete();
-
         if ($balita) {
-            return redirect()->route('index-balita')->with(['sukses' => 'Sukses Hapus Data Balita']);
+            toast("Data $balita->nama Berhasil Di hapus ", 'success');
+            return redirect()->back();
         } else {
-            return redirect()->route('index-balita')->with(['gagal' => 'Gagal Tambah Data Balita']);
+            toast("Data $balita->nama Gagal Di hapus ", 'error');
+            return redirect()->back();
         }
     }
 }

@@ -5,12 +5,12 @@
 @section('backend')
     <br>
     <br>
-    <h1 id="ftd">Table Jenis Imunisasi</h1>
+    <h1 id="ftd">Table Jenis Vitamin</h1>
     <br>
     <div class="container-fluid">
         <a href="{{ route('halaman-dashboard') }}" class="btn btn-primary" style="border-radius: 5rem">Kembali Halaman
             Admin</a>
-        <a href="{{ route('create-jenisImunisasi') }}" class="btn btn-warning" style="border-radius: 5rem">Tambah Data</a>
+        <a href="{{ route('create-jenisVitamin') }}" class="btn btn-warning" style="border-radius: 5rem">Tambah Data</a>
         <br>
         <br>
 
@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Jenis Imunisasi</th>
+                            <th scope="col">Jenis Vitamin</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -31,11 +31,11 @@
                         @foreach ($data as $d)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $d->imunisasi }}</td>
+                                <td>{{ $d->vitamin }}</td>
                                 <td>
-                                    <a href="{{ route('edit-jenisImunisasi', $d->id) }}" class="btn btn-warning"
+                                    <a href="{{ route('edit-jenisVitamin', $d->id) }}" class="btn btn-warning"
                                         style="border-radius: 5rem">EDIT</a>
-                                    <form action="{{ route('delete-imunisasi', $d->id) }}" class="d-inline" method="POST">
+                                    <form action="{{route('delete-jenisVitamin', $d->id)}}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger"

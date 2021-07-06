@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{-- <link rel="apple-touch-icon" href="apple-icon.png"> --}}
-    <link rel="shortcut icon" href="{{ asset('assets/img/download.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/Logo-Puskesmas.png') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
@@ -31,6 +31,8 @@
 </head>
 
 <body>
+
+    @include('sweetalert::alert')
 
     @include('backend.layouts.slide-bar')
 

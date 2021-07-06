@@ -5,7 +5,7 @@
 @section('backend')
     <div class="container mt-3">
         <br>
-        <h1 id="ftd">Create Guru</h1>
+        <h1 id="ftd">Create Balita</h1>
         <br>
         <form action="{{route('store-balita')}}" method="POST" enctype="multipart/form-data">
             @csrf

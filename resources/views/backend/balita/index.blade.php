@@ -11,36 +11,7 @@
         <a href="{{ route('halaman-dashboard') }}" class="btn btn-primary" style="border-radius: 5rem">Kembali Halaman
             Admin</a>
         <a href="{{ route('create-balita') }}" class="btn btn-warning" style="border-radius: 5rem">Tambah Data</a>
-        <br>
-        <br>
-
-        @if (session()->has('validasi'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session()->get('validasi') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
-        {{-- Sukses --}}
-        @if (Session::has('sukses'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <p>{{ Session::get('sukses') }}</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
-        {{-- Gagal --}}
-        @if (Session::has('gagal'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <p>{{ Session::get('gagal') }}</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
-
+        <br><br>
         <div class="card">
             <div class="card-header">
                 <strong class="card-title">Data Table</strong>

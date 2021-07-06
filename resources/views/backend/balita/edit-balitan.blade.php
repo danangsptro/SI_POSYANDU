@@ -5,7 +5,7 @@
 @section('backend')
     <div class="container mt-3">
         <br>
-        <h1 id="ftd">Create Karyawan</h1>
+        <h1 id="ftd">Edit Balita</h1>
         <br>
         <form action="{{ route('update-balita', $balita->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
