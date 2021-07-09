@@ -13,7 +13,8 @@
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="{{ route('halaman-dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a href="{{ route('halaman-dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard
+                    </a>
                 </li>
                 <h3 class="menu-title">UI elements</h3>
 
@@ -23,6 +24,9 @@
                     <ul class="sub-menu children dropdown-menu">
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-table"></i><a href="{{ route('index-checkUp') }}">Check Up</a>
                         </li>
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-jenisImunisasi') }}">Jenis
