@@ -80,7 +80,6 @@ class checkUpController extends Controller
         $id = $request->id;
 
         $checkUp = checkup::find($id);
-        $balita  = balita::find($id);
 
         $checkUp->update([
             'nama_vitamin'      => $request->nama_vitamin,
