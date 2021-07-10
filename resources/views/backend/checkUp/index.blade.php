@@ -21,10 +21,10 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Vitamin</th>
-                            <th scope="col">Imunisasi</th>
                             <th scope="col">Nama Balita</th>
                             <th scope="col">Berat Badan</th>
+                            <th scope="col">Vitamin</th>
+                            <th scope="col">Imunisasi</th>
                             <th scope="col">Tanggal Imunisasi</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -33,13 +33,14 @@
                         @foreach ($data as $d)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $d->idVitamin->vitamin }}</td>
-                                <td>{{ $d->idImunisasi->imunisasi }}</td>
                                 <td>{{ $d->idBalita->nama }}</td>
                                 <td>{{ $d->berat_balita }}</td>
+                                <td>{{ $d->idVitamin->vitamin }}</td>
+                                <td>{{ $d->idImunisasi->imunisasi }}</td>
                                 <td>{{ $d->tanggal_imunisasi }}</td>
                                 <td>
-                                    <a href="" class="btn btn-warning" style="border-radius: 5rem">EDIT</a>
+                                    <a href="{{ route('edit-checkUp', $d->id) }}" class="btn btn-warning"
+                                        style="border-radius: 5rem">EDIT</a>
                                     <form action="{{ route('delete-checkUp', $d->id) }}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')

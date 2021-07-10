@@ -35,9 +35,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('update-jenisVitamin', 'backend\jenisVitaminController@update')->name('update-jenisVitamin');
         Route::delete('delete-jenisVitamin/{jenisVitamin}', 'backend\jenisVitaminController@delete')->name('delete-jenisVitamin');
         // Checkup
-        Route::get('index_checkUp', 'backend\checkUpController@index')->name('index-checkUp');
-        Route::get('create_checkUp', 'backend\checkUpController@create')->name('create-checkUp');
-        Route::post('store_checkUp', 'backend\checkUpController@store')->name('store-checkUp');
-        Route::delete('delete_checkUp/{checkUp}', 'backend\checkUpController@delete')->name('delete-checkUp');
+        Route::get('index-checkUp', 'backend\checkUpController@index')->name('index-checkUp');
+        Route::get('create-checkUp', 'backend\checkUpController@create')->name('create-checkUp');
+        Route::post('store-checkUp', 'backend\checkUpController@store')->name('store-checkUp');
+        Route::get('edit-checkup/{id}', 'backend\checkUpController@edit')->name('edit-checkUp');
+        Route::post('update-checkup', 'backend\checkUpController@update')->name('update-checkUp');
+        Route::delete('delete-checkUp/{checkUp}', 'backend\checkUpController@delete')->name('delete-checkUp');
     });
 });

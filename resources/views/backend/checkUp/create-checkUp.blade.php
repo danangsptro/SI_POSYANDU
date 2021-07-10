@@ -9,6 +9,30 @@
         <br>
         <form action="{{ route('store-checkUp') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            {{-- Balita --}}
+            <label for="id_balita"><strong>Nama Balita</strong></label>
+            <select name="id_balita" id="id_balita" class="custom-select">
+                <option value="">
+                    -- Pilih Nama Balita --
+                </option>
+                @foreach ($balita as $item)
+                    <option value="{{ $item->id }}">
+                        {{ $item->nama }}
+                    </option>
+                @endforeach
+            </select>
+            @error('id_balita')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+            <br><br>
+            {{-- Berat Badan --}}
+            <div class="form-group">
+                <label for="berat_balita"><strong>Berat Badan</strong></label>
+                <input type="text" class="form-control" name="berat_balita">
+                @error('berat_balita')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
             {{-- Vitamin --}}
             <label for="nama_vitamin"><strong>Vitamin</strong></label>
             <select name="nama_vitamin" id="nama_vitamin" class="custom-select">
@@ -22,7 +46,7 @@
                 @endforeach
             </select>
             @error('nama_vitamin')
-            <div class="text-danger">{{ $message }}</div>
+                <div class="text-danger">{{ $message }}</div>
             @enderror
             <br><br>
             {{-- Imunisasi --}}
@@ -38,37 +62,13 @@
                 @endforeach
             </select>
             @error('nama_imunisasi')
-            <div class="text-danger">{{ $message }}</div>
+                <div class="text-danger">{{ $message }}</div>
             @enderror
             <br><br>
-            {{-- Balita --}}
-            <label for="id_balita"><strong>Nama Balita</strong></label>
-            <select name="id_balita" id="id_balita" class="custom-select">
-                <option value="">
-                    -- Pilih Nama Balita --
-                </option>
-                @foreach ($balita as $item)
-                    <option value="{{ $item->id }}">
-                        {{ $item->nama }}
-                    </option>
-                @endforeach
-            </select>
-            @error('id_balita')
-            <div class="text-danger">{{ $message }}</div>
-            @enderror
-            <br><br>
-            {{-- Berat Badan --}}
-            <div class="form-group">
-                <label for="berat_balita"><strong>Berat Badan</strong></label>
-                <input type="text" class="form-control" name="berat_balita">
-                @error('berat_balita')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
-            </div>
             {{-- TANGGAL Imunisasi --}}
             <div class="form-group">
                 <label for="tanggal_imunisasi"><strong>Tanggal Imunisasi</strong></label>
-                <input type="date" class="form-control" name="tanggal_imunisasi">
+                <input type="date" class="form-control" name="tanggal_imunisasi" style="width: 180px">
                 @error('tanggal_imunisasi')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror

@@ -118,9 +118,7 @@
                             <div class="float-right">
                                 <p class="mb-0 text-right"><strong>Total Laporan Imunisasi</strong></p>
                                 <div class="container-fluid">
-                                    {{-- <h3 class="text-right">{{ $jabatan->count() }}</h3> --}}
-                                    <h3 class="text-right">13</h3>
-
+                                    <h3 class="text-right">{{ $checkUp->count() }} </h3>
                                 </div>
                             </div>
                         </div>
