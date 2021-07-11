@@ -43,3 +43,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::delete('delete-checkUp/{checkUp}', 'backend\checkUpController@delete')->name('delete-checkUp');
     });
 });
+
+// Frontend
+Route::prefix('home')->group(function () {
+    Route::get('page', 'frontend\bidanController@index')->name('page');
+    Route::get('data-imunisasi', 'frontend\bidanController@dataImunisasi')->name('dataImun');
+});
