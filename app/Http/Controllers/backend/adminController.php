@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Description of welcome
- *
- * @author Danang Saputro
- * Github : danangsptro
- */
 
 namespace App\Http\Controllers\backend;
 

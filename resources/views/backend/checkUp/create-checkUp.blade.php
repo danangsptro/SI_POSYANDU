@@ -65,6 +65,14 @@
                 <div class="text-danger">{{ $message }}</div>
             @enderror
             <br><br>
+            {{-- Status Gizi --}}
+            <div class="form-group">
+                <label for="status_gizi"><strong>Status Gizi</strong></label>
+                <input type="text" class="form-control" name="status_gizi">
+                @error('status_gizi')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
             {{-- TANGGAL Imunisasi --}}
             <div class="form-group">
                 <label for="tanggal_imunisasi"><strong>Tanggal Imunisasi</strong></label>

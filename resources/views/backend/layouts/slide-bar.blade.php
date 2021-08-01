@@ -16,11 +16,15 @@
                     <a href="{{ route('halaman-dashboard') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard
                     </a>
                 </li>
+                {{-- <li>
+                    <a href="{{ route('index-user') }}"> <i class="menu-icon fa fa-user"></i>User
+                    </a>
+                </li> --}}
                 <h3 class="menu-title">UI elements</h3>
 
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Table</a>
+                        aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Data</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li>
                             <i class="fa fa-table"></i><a href="{{ route('index-balita') }}">Balita</a>
@@ -45,7 +49,7 @@
                         aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Profil</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li>
-                            <i class="fa fa-table"></i><a href="">Kader</a>
+                            <i class="fa fa-table"></i><a href="{{ route('index-user') }}">Kader</a>
                         </li>
                     </ul>
                 </li>

@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Description of welcome
- *
- * @author Danang Saputro
- * Github : danangsptro
- */
-
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
@@ -43,6 +36,7 @@ class checkUpController extends Controller
             'nama_imunisasi'    => 'required|min:1',
             'id_balita'         => 'required|min:1',
             'berat_balita'      => 'required|min:1',
+            'status_gizi'       => 'required',
             'tanggal_imunisasi' => 'required'
         ]);
 
@@ -51,6 +45,7 @@ class checkUpController extends Controller
         $checkUp->nama_imunisasi    = $validate['nama_imunisasi'];
         $checkUp->id_balita         = $validate['id_balita'];
         $checkUp->berat_balita      = $validate['berat_balita'];
+        $checkUp->status_gizi       = $validate['status_gizi'];
         $checkUp->tanggal_imunisasi = $validate['tanggal_imunisasi'];
         $checkUp->save();
 
@@ -81,6 +76,7 @@ class checkUpController extends Controller
             'nama_imunisasi'    => 'required|min:1',
             'id_balita'         => 'required|min:1',
             'berat_balita'      => 'required|min:1',
+            'status_gizi'      => 'required|min:1',
             'tanggal_imunisasi' => 'required'
         ]);
 
@@ -93,6 +89,7 @@ class checkUpController extends Controller
             'nama_imunisasi'    => $request->nama_imunisasi,
             'id_balita'         => $request->id_balita,
             'berat_balita'      => $request->berat_balita,
+            'status_gizi'       => $request->status_gizi,
             'tanggal_imunisasi' => $request->tanggal_imunisasi
         ]);
 

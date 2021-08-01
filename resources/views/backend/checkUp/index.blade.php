@@ -25,6 +25,7 @@
                             <th scope="col">Berat Badan</th>
                             <th scope="col">Vitamin</th>
                             <th scope="col">Imunisasi</th>
+                            <th scope="col">Status Gizi</th>
                             <th scope="col">Tanggal Imunisasi</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -37,6 +38,7 @@
                                 <td>{{ $d->berat_balita }}</td>
                                 <td>{{ $d->idVitamin->vitamin }}</td>
                                 <td>{{ $d->idImunisasi->imunisasi }}</td>
+                                <td>{{ $d->status_gizi }}</td>
                                 <td>{{ $d->tanggal_imunisasi }}</td>
                                 <td>
                                     <a href="{{ route('edit-checkUp', $d->id) }}" class="btn btn-warning"

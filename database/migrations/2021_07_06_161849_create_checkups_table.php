@@ -19,6 +19,7 @@ class CreateCheckupsTable extends Migration
             $table->bigInteger('nama_imunisasi')->unsigned();
             $table->bigInteger('id_balita')->unsigned();
             $table->string('berat_balita');
+            $table->string('status_gizi');
             $table->date('tanggal_imunisasi');
             $table->timestamps();
 

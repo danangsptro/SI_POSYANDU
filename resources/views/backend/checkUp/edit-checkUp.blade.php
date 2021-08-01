@@ -64,6 +64,14 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
+            {{-- STATUS GIZI --}}
+            <div class="form-group">
+                <label for="status_gizi"><strong>Status Gizi</strong></label>
+                <input type="text" class="form-control" name="status_gizi" value="{{ $checkUp->status_gizi }}">
+                @error('status_gizi')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
             {{-- TANGGAL Imunisasi --}}
             <div class="form-group">
                 <label for="tanggal_imunisasi"><strong>Tanggal Imunisasi</strong></label>

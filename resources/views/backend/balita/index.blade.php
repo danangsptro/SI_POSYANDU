@@ -39,8 +39,9 @@
                                 <td>{{ $d->tanggal_lahir }}</td>
                                 <td>{{ $d->alamat }}</td>
                                 <td>
-                                <a href="{{route('edit-balita', $d->id)}}" class="btn btn-warning" style="border-radius: 5rem">EDIT</a>
-                                    <form action="{{route('delete-balita', $d->id)}}" class="d-inline" method="POST">
+                                    <a href="{{ route('edit-balita', $d->id) }}" class="btn btn-warning"
+                                        style="border-radius: 5rem">EDIT</a>
+                                    <form action="{{ route('delete-balita', $d->id) }}" class="d-inline" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger"

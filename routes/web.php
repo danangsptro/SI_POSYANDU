@@ -13,6 +13,13 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('admin', 'backend\adminController@index')->name('halaman-dashboard');
+        // User
+        Route::get('user', 'backend\userController@index')->name('index-user');
+        Route::post('user-store', 'backend\userController@store')->name('store-user');
+        // Kader
+        Route::get('kader', 'backend\kaderController@index')->name('index-kader');
+        Route::get('edit-kader/{id}', 'backend\kaderController@edit')->name('edit-kader');
+        Route::post('update-kader', 'backend\kaderController@update')->name('update-kader');
         // Balita
         Route::get('balita', 'backend\balitaController@index')->name('index-balita');
         Route::get('create-balita', 'backend\balitaController@create')->name('create-balita');
@@ -41,6 +48,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('edit-checkup/{id}', 'backend\checkUpController@edit')->name('edit-checkUp');
         Route::post('update-checkup', 'backend\checkUpController@update')->name('update-checkUp');
         Route::delete('delete-checkUp/{checkUp}', 'backend\checkUpController@delete')->name('delete-checkUp');
+        // Status Gizi
+        Route::get('status-gizi', 'backend\statusGiziController@index')->name('status-gizi');
+        Route::get('create-gizi', 'backend\statusGiziController@create')->name('create-gizi');
+        Route::post('store-gizi', 'backend\statusGiziController@store')->name('store-gizi');
+        Route::get('edit-gizi/{id}', 'backend\statusGiziController@edit')->name('edit-gizi');
+        Route::post('update-gizi', 'backend\statusGiziController@update')->name('update-gizi');
+        Route::delete('delete-gizi/{statusGizi}', 'backend\statusGiziController@delete')->name('delete-gizi');
     });
 });
 
