@@ -23,7 +23,7 @@
             </div>
         </div>
         <marquee behavior="" direction="" style="color: red; font-family:Cambria;">
-            <h3><i><strong>WELCOME TO DASHBOARD POSYANDU DESA SAGA</strong></i></h3>
+            <h3><i><strong>WELCOME TO DASHBOARD POSYANDU ASTER 2C</strong></i></h3>
         </marquee>
         <div class="row">
             <div class="col-lg-12">
@@ -32,7 +32,8 @@
                         <div class="container" style=" text-align: center; color:white;">
                             <h1 class="display-4"><strong>Selamat Datang</strong></h1>
                             <br>
-                            <h3 class="display-5">Di halaman Dashboard POSYANDU DESA SAGA</h3>
+                            <h3 class="display-5">POSYANDU ASTER 2C</h3>
+                            <h3 class="display-5">RW 05 Villa Balaraja Desa Saga </h3>
                         </div>
                     </div>
                 </div>
