@@ -19,7 +19,9 @@
                     <span style="margin-right: 1rem;">{{ Auth::user()->name }}</span>
                     </a>
                     <div class="user-menu dropdown-menu">
-                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      <a class="nav-link" href="{{route('index-kader')}}"><i class="fa fa-user"></i> My Profile</a>
+
+                      <a class="nav-link" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i>
                           {{ __('Logout') }}
