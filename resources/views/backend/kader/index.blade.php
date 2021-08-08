@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
+                            {{-- <th scope="col">Foto</th> --}}
                             <th scope="col">Nama</th>
                             <th scope="col">Email</th>
                             <th scope="col">Status</th>
@@ -34,13 +35,22 @@
                         @foreach ($kader as $d)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                {{-- <td>
+                                    @if (!$d->foto)
+                                        <img src="{{ asset('assets/img/no_foto.png') }}" alt="No Foto"
+                                            class="card-img-top" style="width: 100px">
+                                    @else
+                                        <img src="{{ Storage::url($d->foto) }}" alt="" class="card-img-top"
+                                            style="width: 100px">
+                                    @endif
+                                </td> --}}
                                 <td>{{ $d->name }}</td>
                                 <td>{{ $d->email }}</td>
                                 <td>{{ $d->status != null ? $d->status : '-' }}</td>
                                 <td>{{ $d->jabatan != null ? $d->jabatan : '-' }}</td>
                                 <td>{{ $d->jenis_kelamin != null ? $d->jenis_kelamin : '-' }}</td>
                                 <td>
-                                    <a href="{{route('edit-kader', $d->id)}}" class="btn btn-warning"
+                                    <a href="{{ route('edit-kader', $d->id) }}" class="btn btn-warning"
                                         style="border-radius: 5rem">EDIT</a>
                                 </td>
                             </tr>

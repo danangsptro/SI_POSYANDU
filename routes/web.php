@@ -13,9 +13,6 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('admin', 'backend\adminController@index')->name('halaman-dashboard');
-        // User
-        Route::get('user', 'backend\userController@index')->name('index-user');
-        Route::post('user-store', 'backend\userController@store')->name('store-user');
         // Kader
         Route::get('kader', 'backend\kaderController@index')->name('index-kader');
         Route::get('edit-kader/{id}', 'backend\kaderController@edit')->name('edit-kader');

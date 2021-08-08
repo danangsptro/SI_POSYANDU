@@ -17,6 +17,7 @@ class AddColumnAddToUsersTable extends Migration
             $table->string('status')->nullable()->after('password');
             $table->string('jenis_kelamin')->nullable()->after('status');
             $table->string('jabatan')->nullable()->after('jenis_kelamin');
+            // $table->string('foto')->nullable()->after('jabatan');
         });
     }
 
@@ -31,6 +32,7 @@ class AddColumnAddToUsersTable extends Migration
             $table->dropColumn('status');
             $table->dropColumn('jenis_kelamin');
             $table->dropColumn('jabatan');
+            // $table->dropColumn('foto');
         });
     }
 }

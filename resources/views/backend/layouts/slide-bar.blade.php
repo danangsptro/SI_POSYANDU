@@ -49,7 +49,7 @@
                         aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Profil</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li>
-                            <i class="fa fa-table"></i><a href="{{ route('index-user') }}">Kader</a>
+                            <i class="fa fa-table"></i><a href="{{route('index-kader')}}">Kader</a>
                         </li>
                     </ul>
                 </li>

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+
 
 class kaderController extends Controller
 {
@@ -23,6 +25,8 @@ class kaderController extends Controller
 
     public function update (Request $request)
     {
+        $adminId = Auth::user()->id;
+
         $request->validate([
             'name'          => 'required|min:2',
             'status'        => 'required',
@@ -30,22 +34,23 @@ class kaderController extends Controller
             'jabatan'       => 'required'
         ]);
 
-        $id = $request->id;
+        $name           = $request->name;
+        $status         = $request->status;
+        $jenis_kelamin  = $request->jenis_kelamin;
+        $jabatan        = $request->jabatan;
 
-        $kader = User::find($id);
-
-        $kader->update([
-            'name'          => $request->name,
-            'status'        => $request->status,
-            'jenis_kelamin' => $request->jenis_kelamin,
-            'jabatan'       => $request->jabatan,
+        $kader = User::where('id', $adminId)->update([
+            'name'          => $name,
+            'status'        => $status,
+            'jenis_kelamin' => $jenis_kelamin,
+            'jabatan'       => $jabatan
         ]);
 
         if ($kader) {
-            toast("Data $kader->name Berhasil Di Edit ", 'success');
+            toast("Data Berhasil Di Edit ", 'success');
             return redirect()->route('index-kader');
         } else {
-            toast("Data $kader->name Gagal Di Edit ", 'error');
+            toast("Data Berhasil Di Edit ", 'success');
             return redirect()->route('index-kader');
         }
     }
