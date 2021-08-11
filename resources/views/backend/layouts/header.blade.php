@@ -15,7 +15,7 @@
             <div class="col-sm-5">
                 <div class="user-area dropdown float-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle" src="{{asset('assets/img/adminnn.png')}}" alt="User Avatar">
+                    <img class="user-avatar rounded-circle" src="{{asset( Auth::user()->foto == null ? 'assets/img/adminnn.png' : Storage::url(Auth::user()->foto))}}" alt="User Avatar">
                     <span style="margin-right: 1rem;">{{ Auth::user()->name }}</span>
                     </a>
                     <div class="user-menu dropdown-menu">

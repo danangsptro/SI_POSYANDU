@@ -16,7 +16,7 @@ Route::group(['middleware' => 'auth'], function () {
         // Kader
         Route::get('kader', 'backend\kaderController@index')->name('index-kader');
         Route::get('edit-kader/{id}', 'backend\kaderController@edit')->name('edit-kader');
-        Route::post('update-kader', 'backend\kaderController@update')->name('update-kader');
+        Route::post('update-kader/{id}', 'backend\kaderController@update')->name('update-kader');
         // Balita
         Route::get('balita', 'backend\balitaController@index')->name('index-balita');
         Route::get('create-balita', 'backend\balitaController@create')->name('create-balita');

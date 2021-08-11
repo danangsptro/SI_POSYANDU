@@ -22,12 +22,12 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            {{-- <th scope="col">Foto</th> --}}
+                            <th scope="col">Foto</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Email</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Jabatan</th>
+                            <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -35,15 +35,15 @@
                         @foreach ($kader as $d)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                {{-- <td>
+                                <td>
                                     @if (!$d->foto)
-                                        <img src="{{ asset('assets/img/no_foto.png') }}" alt="No Foto"
+                                        <img src="{{ asset('assets/img/adminnn.png') }}" alt="No Foto"
                                             class="card-img-top" style="width: 100px">
                                     @else
                                         <img src="{{ Storage::url($d->foto) }}" alt="" class="card-img-top"
                                             style="width: 100px">
                                     @endif
-                                </td> --}}
+                                </td>
                                 <td>{{ $d->name }}</td>
                                 <td>{{ $d->email }}</td>
                                 <td>{{ $d->status != null ? $d->status : '-' }}</td>
